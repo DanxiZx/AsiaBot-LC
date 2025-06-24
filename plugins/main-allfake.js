@@ -112,11 +112,11 @@ global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo
 
 
 global.icono = [ 
-'https://kirito-bot-md.vercel.app/IMG-20250606-WA0167.jpg',
-'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/pika.jpg',
-'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/pikay.jpg',
-'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/pikachu.jpg',
-'https://kirito-bot-md.vercel.app/catalogo.jpg'
+'https://files.catbox.moe/mb00xe.jpg',
+'https://files.catbox.moe/2skb4v.jpg',
+'https://files.catbox.moe/byt0ax.jpg',
+'https://files.catbox.moe/0shnqp.jpg',
+'https://files.catbox.moe/4x6b5t.jpg'
 ].getRandom()
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: textbot, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
