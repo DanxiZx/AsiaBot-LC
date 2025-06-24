@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
 const imageUrl = 'https://files.catbox.moe/e5losx.jpg'
   const numCreador = '18493907272';
   const ownerJid = numCreador + '@s.whatsapp.net';
-  const name = await conn.getName(ownerJid) || 'Deylin';
+  const name = await conn.getName(ownerJid) || 'Dani';
   const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `𝙃𝙤𝙡𝙖 𝙈𝙚 𝙇𝙡𝙖𝙢𝙤 𝘿𝙖𝙣𝙞 𝙐𝙣 𝙂𝙪𝙨𝙩𝙤 ❤️.`;
   const empresa = 'Dani- Servicios Tecnológicos sobre bot';
 
