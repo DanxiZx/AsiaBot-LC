@@ -80,7 +80,7 @@ ${readMore}
 
       menuText += `\n╭─ꨄ︎ *${tags[tag]}* ${getRandomEmoji()}\n`
       menuText += comandos.map(menu => menu.help.map(cmd =>
-        `│ ꨄ︎ ${cmd}${menu.limit ? ' ◜⭐◞' : ''}${menu.premium ? ' ◜🪪◞' : ''}`
+        `│ ꨄ︎ ${cmd}${menu.limit ? ' ◜💫◞' : ''}${menu.premium ? ' ◜🪪◞' : ''}`
       ).join('\n')).join('\n')
       menuText += `\n┗━━━━━━━━━━━━━━━━━━┛`
     }
