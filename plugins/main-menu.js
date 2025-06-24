@@ -91,10 +91,11 @@ ${readMore}
     await m.react('🟡')
 
         await conn.sendMessage(m.chat, {
-      text: menuText,
-      contextInfo: {
-        mentionedJid: [m.sender],
-        isForwarded: true,
+  image: { url: imageUrl },
+  caption: menuText,
+  contextInfo: {
+    mentionedJid: [m.sender],
+    isForwarded: true
         forwardedNewsletterMessageInfo: {
           newsletterJid: channelRD.id,
           newsletterName: channelRD.name,
