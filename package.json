@@ -30,6 +30,9 @@
     "url": "https://github.com/Deylin-Eliac/Pikachu-Bot/issues"
   },
   "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@bochilteam/scraper": "^4.2.4",
     "@vitalets/google-translate-api": "^8.0.0",
