@@ -18,7 +18,7 @@ let handler = async (m, { text, conn }) => {
     let prompt = encodeURIComponent(text.trim())
     let imageUrl = `https://anime-xi-wheat.vercel.app/api/ia-img?prompt=${prompt}`
 
-    await conn.sendFile(m.chat, imageUrl, 'imagen.jpg', `🧃 Imagen generada:
+    await conn.sendFile(m.chat, imageUrl, 'imagen.jpg', `✅Imagen generada:
 https://anime-xi-wheat.vercel.app/api/ia-img?prompt=${prompt}`, m, fake)
   } catch (e) {
     console.error(e)
