@@ -39,8 +39,8 @@ global.listo = '⚡ *¡Aquí tienes lo que pediste, maestro pokémon!*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => catalogo,)
 
 // 🗞 Canal del Bot
-global.idchannel = '120363365444927738@newsletter'
-global.canalIdM = ["120363365444927738@newsletter", "120363365444927738@newsletter"]
+global.idchannel = '120363415670808219@newsletter'
+global.canalIdM = ["120363415670808219@newsletter", "120363415670808219@newsletter"]
 global.canalNombreM = ["⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡", "⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡"]
 global.channelRD = await getRandomChannel()
 
