@@ -61,16 +61,16 @@ let handler = async (m, { conn }) => {
     }))
 
     let menuText = `
-╭════〔 ⚡ 𝙋𝙄𝙆𝘼𝘾𝙃𝙐 - 𝘽𝙊𝙏 ⚡ 〕════╮
-│ 🧃 *Usuario:* @${userId.split('@')[0]}
-│ ⚡ *Tipo:* ${(conn.user.jid === global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-│ 🌐 *Modo actual:* ${mode}
-│ 👥 *Usuarios registrados:* ${totalreg}
-│ ⏱️ *Tiempo activo:* ${uptime}
-│ 💾 *Comandos:* ${totalCommands}
-│ 🤖 *Sub-Bots activos:* ${users.length}
+╭════〔 ⭐ 𝙈𝙀𝙉𝙐|𝘼𝙎𝙄𝘼𝘽𝙊𝙏-𝙇𝘾 ⭐ 〕════╮
+│ 👤 *𝙐𝙎𝙐𝘼𝙍𝙄𝙊:* @${userId.split('@')[0]}
+│  𝘽𝙊𝙏: ${(conn.user.jid === global.conn.user.jid ? '𝙋𝙍𝙄𝙉𝘾𝙄𝙋𝘼𝙇 🅥' : 'Prem Bot 🅑')}
+│ 🎲 𝙈𝙊𝘿𝙊 𝘼𝘾𝙏𝙐𝘼𝙇: ${mode}
+│ 📑 𝙐𝙎𝙐𝘼𝙍𝙄𝙊 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊: ${totalreg}
+│ ⏰ 𝙏𝙄𝙀𝙈𝙋𝙊 𝘿𝙀 𝘼𝘾𝙏𝙄𝙑𝙄𝘿𝘼𝘿: ${uptime}
+│ 📜𝘾𝙊𝙈𝘼𝙉𝘿𝙊: ${totalCommands}
+│ 🟢 𝙎𝙐𝘽-𝘽𝙊𝙏 𝘼𝘾𝙏𝙄𝙑𝙊𝙎: ${users.length}
 ╰════════════════════════════╯
-🎮 *📋 COMANDOS DISPONIBLES 📋* ⚡
+𝘾𝙊𝙈𝘼𝙉𝘿𝙊 𝘿𝙄𝙎𝙋𝙊𝙉𝙄𝘽𝙇𝙀 𝙔𝘼 🌟
 ${readMore}
 `
 
@@ -78,17 +78,17 @@ ${readMore}
       const comandos = help.filter(menu => menu.tags.includes(tag))
       if (comandos.length === 0) continue
 
-      menuText += `\n╭─🧃 *${tags[tag]}* ${getRandomEmoji()}\n`
+      menuText += `\n╭─ꨄ︎ *${tags[tag]}* ${getRandomEmoji()}\n`
       menuText += comandos.map(menu => menu.help.map(cmd =>
-        `│ ✦ ${cmd}${menu.limit ? ' ◜⭐◞' : ''}${menu.premium ? ' ◜🪪◞' : ''}`
+        `│ ꨄ︎ ${cmd}${menu.limit ? ' ◜⭐◞' : ''}${menu.premium ? ' ◜🪪◞' : ''}`
       ).join('\n')).join('\n')
       menuText += `\n╰────────────────────────────╯`
     }
 
-    menuText += `\n\n*👑 © Powered by Deylin - ${botname}*`
+    menuText += `\n\n*ꨄ︎ © ᴇᴄʜᴏ ᴘᴏʀ ᴇʀᴇɴxs - ${botname}*`
 
     const imageUrl = 'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/IMG-20250613-WA0194.jpg'
-    await m.react('👑')
+    await m.react('🟡')
 
     await conn.sendMessage(m.chat, {
       text: menuText,
@@ -138,6 +138,6 @@ function clockString(ms) {
 }
 
 function getRandomEmoji() {
-  const emojis = ['👑', '🔥', '🌟', '⚡']
+  const emojis = ['🐣', '🟡', '🌟', '⭐']
   return emojis[Math.floor(Math.random() * emojis.length)]
 }
