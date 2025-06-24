@@ -87,7 +87,7 @@ ${readMore}
 
     menuText += `\n\n*ꨄ︎ © ᴇᴄʜᴏ ᴘᴏʀ ᴇʀᴇɴxs - ${botname}*`
 
-    const imageUrl = 'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/IMG-20250613-WA0194.jpg'
+    const imageUrl = 'https://files.catbox.moe/0shnqp.jpg'
     await m.react('🟡')
 
     await conn.sendMessage(m.chat, {
