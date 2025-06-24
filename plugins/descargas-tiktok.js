@@ -2,11 +2,11 @@ import fetch from 'node-fetch';
 
 var handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) {
-        return conn.reply(m.chat, `⚡🐭 ¡Pika Pika! Por favor, envía un enlace de TikTok para que lo pueda descargar.`, m);
+        return conn.reply(m.chat, `ꨄ︎ Por favor, envía un enlace de TikTok para que lo pueda descargar.`, m);
     }
 
     try {
-        await conn.reply(m.chat, `⚡🐭 ¡Pikachu está corriendo por el video! Un momento por favor...`, m);
+        await conn.reply(m.chat, `ꨄ︎ está corriendo por el video! Un momento por favor...`, m);
 
         const tiktokData = await tiktokdl(args[0]);
 
@@ -20,14 +20,14 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
             const { title, author, duration } = tiktokData.data;
 
             const info = `
-╭─────⚡🐭─────╮
-│ *🎬 Título:* ${title || 'No disponible'}
-│ *👤 Autor:* ${author || 'Desconocido'}
-│ *⏱ Duración:* ${duration ? duration + 's' : 'Desconocida'}
-╰─────⚡🐭─────╯
+╭───── • ◆ • ─────╮
+│ 🎬 𝙏𝙞𝙩𝙪𝙡𝙤:* ${title || 'No disponible'}
+│ 👤 𝘼𝙪𝙩𝙝𝙤𝙧:* ${author || 'Desconocido'}
+│ ⏳ 𝘿𝙪𝙧𝙖𝙘𝙞𝙤𝙣:* ${duration ? duration + 's' : 'Desconocida'}
+╰───── • ◆ • ─────╯
 `;
 
-            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `${info}\n✨ ¡Aquí tienes tu video con poder Pikachu!\n⚡ ¡Atrápalo ya!`, m);
+            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `${info}\n✨ ¡Aquí tienes tu video ꨄ︎`, m);
         } else {
             return conn.reply(m.chat, "❌ No se pudo descargar el video. Inténtalo más tarde.", m);
         }
