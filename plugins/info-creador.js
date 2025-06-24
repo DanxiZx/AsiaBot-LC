@@ -6,14 +6,14 @@
 import PhoneNumber from 'awesome-phonenumber';
 
 let handler = async (m, { conn }) => {
-  m.react('🧃');
+  m.react('🤴🏼');
   
-const imageUrl = 'https://raw.githubusercontent.com/Deylin-Eliac/Pikachu-Bot/main/src/IMG-20250613-WA0194.jpg'
-  const numCreador = '50433191934';
+const imageUrl = 'https://files.catbox.moe/e5losx.jpg'
+  const numCreador = '18493907272';
   const ownerJid = numCreador + '@s.whatsapp.net';
   const name = await conn.getName(ownerJid) || 'Deylin';
-  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `Hola, mucho gusto. Soy Deylin.`;
-  const empresa = 'Deylin - Servicios Tecnológicos';
+  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `𝙃𝙤𝙡𝙖 𝙈𝙚 𝙇𝙡𝙖𝙢𝙤 𝘿𝙖𝙣𝙞 𝙐𝙣 𝙂𝙪𝙨𝙩𝙤 ❤️.`;
+  const empresa = '𝘿𝙖𝙣𝙞- Servicios Tecnológicos sobre bot';
 
   const vcard = `
 BEGIN:VCARD
