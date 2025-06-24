@@ -5,8 +5,6 @@ import path, { join } from 'path'
 import { unwatchFile, watchFile } from 'fs'
 import chalk from 'chalk'
 import fetch from 'node-fetch'
-import getMensajeSistema from './lib/msmwarning.js'
-
 
 const { proto } = (await import('@whiskeysockets/baileys')).default
 const isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -31,6 +29,7 @@ m = smsg(this, m) || m
 if (!m)
 return
 m.exp = 0
+m.coin = false
 try {
 let user = global.db.data.users[m.sender]
 if (typeof user !== 'object')
@@ -39,6 +38,8 @@ global.db.data.users[m.sender] = {}
 if (user) {
 if (!isNumber(user.exp))
 user.exp = 0
+if (!isNumber(user.coin))
+user.coin = 10
 if (!isNumber(user.joincount))
 user.joincount = 1
 if (!isNumber(user.diamond))
@@ -101,6 +102,8 @@ if (!('banned' in user))
 user.banned = false
 if (!('useDocument' in user))
 user.useDocument = false
+if (!isNumber(user.level))
+user.level = 0
 if (!isNumber(user.bank))
 user.bank = 0
 if (!isNumber(user.warn))
@@ -108,6 +111,7 @@ user.warn = 0
 } else
                 global.db.data.users[m.sender] = {
 exp: 0,
+coin: 10,
 joincount: 1,
 diamond: 3,
 lastadventure: 0,
@@ -135,6 +139,7 @@ afkReason: '',
 banned: false,
 useDocument: false,
 bank: 0,
+level: 0,
 role: 'Nuv',
 premium: false,
 premiumTime: 0,                 
@@ -149,6 +154,8 @@ if (!('sAutoresponder' in chat))
 chat.sAutoresponder = ''
 if (!('welcome' in chat))
 chat.welcome = false
+if (!('autolevelup' in chat))
+chat.autolevelup = false
 if (!('autoAceptar' in chat))
 chat.autoAceptar = false
 if (!('autosticker' in chat))
@@ -186,6 +193,7 @@ global.db.data.chats[m.chat] = {
 isBanned: false,
 sAutoresponder: '',
 welcome: false,
+autolevelup: false,
 autoresponder: false,
 delete: false,
 autoAceptar: false,
@@ -421,12 +429,24 @@ if (plugin.private && m.isGroup) {
 fail('private', m, this)
 continue
 }
+if (plugin.register == true && _user.registered == false) { 
+fail('unreg', m, this)
+continue
+}
 m.isCommand = true
 let xp = 'exp' in plugin ? parseInt(plugin.exp) : 17 
 if (xp > 200)
 m.reply('chirrido -_-')
 else
 m.exp += xp
+if (!isPrems && plugin.coin && global.db.data.users[m.sender].coin < plugin.coin * 1) {
+conn.reply(m.chat, `❮✦❯ Se agotaron tus ${moneda}`, m)
+continue
+}
+if (plugin.level > _user.level) {
+conn.reply(m.chat, `❮✦❯ Se requiere el nivel: *${plugin.level}*\n\n• Tu nivel actual es: *${_user.level}*\n\n• Usa este comando para subir de nivel:\n*${usedPrefix}levelup*`, m)       
+continue
+}
 let extra = {
 match,
 usedPrefix,
@@ -529,30 +549,33 @@ console.log(m, m.quoted, e)}
 let settingsREAD = global.db.data.settings[this.user.jid] || {}  
 if (opts['autoread']) await this.readMessages([m.key])
 
-if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|Pikachu|a|s)/gi)) {
+if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|ai|kirito|a|s)/gi)) {
 let emot = pickRandom(["🍟", "😃", "😄", "😁", "😆", "🍓", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "🌺", "🌸", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🌟", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "💫", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🤖", "🍭", "🤫", "🫠", "🤥", "😶", "📇", "😐", "💧", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🧿", "🌩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "✨", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "🚩", "👊", "⚡️", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
 if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
 }
 function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
 }}
 
-global.dfail = (type, m, conn, comando = '') => {
-  let mensajes = getMensajeSistema(comando)
+global.dfail = (type, m, conn) => {
+
+  let edadaleatoria = ['10', '28', '20', '40', '18', '21', '15', '11', '9', '17', '25'].getRandom();
+  let user2 = m.pushName || 'Anónimo';
+  let verifyaleatorio = ['registrar', 'reg', 'verificar', 'verify', 'register'].getRandom();
 
   const msg = {
-    rowner: mensajes.smsrowner,
-    owner: mensajes.smsowner,
-    mods: mensajes.smsmods,
-    premium: mensajes.smspremium,
-    group: mensajes.smsgroup,
-    private: mensajes.smsprivate,
-    admin: mensajes.smsadmin,
-    botAdmin: mensajes.smsbotAdmin,
-    restrict: mensajes.smsrestrict
-  }[type]
+  rowner: `*〘 ${comando} 〙 es una función exclusiva de los propietarios principales. Tu acceso no está autorizado.*`,
+  owner: `*〘 ${comando} 〙 solo puede ser ejecutado por los desarrolladores. No tienes los permisos necesarios.*`,
+  mods: `*〘 ${comando} 〙 está reservado para moderadores. Tu perfil no cumple con los requisitos.*`,
+  premium: `*〘 ${comando} 〙 es un beneficio exclusivo para usuarios premium. Este privilegio aún no te corresponde.*`,
+  group: `*〘 ${comando} 〙 solo está disponible en grupos. Este entorno no es válido.*`,
+  private: `*〘 ${comando} 〙 debe utilizarse en un chat privado. Intenta de nuevo en el canal adecuado.*`,
+  admin: `*〘 ${comando} 〙 requiere permisos de administrador. Acceso denegado.*`,
+  botAdmin: `*Para ejecutar 〘 ${comando} 〙, el bot necesita ser administrador. Por favor, actualiza los permisos.*`,
+  unreg: `*Para usar 〘 ${comando} 〙 primero debes registrarte.*\n\n*Utiliza:* _#${verifyaleatorio} ${user2}.${edadaleatoria}_`,
+  restrict: `*Esta función está desactivada. No se permiten excepciones.*`
+}[type];
 
-  if (msg) return conn.reply(m.chat, msg, m, fake).then(_ => m.react('✖️'))
-}
+  if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'));}
 
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
