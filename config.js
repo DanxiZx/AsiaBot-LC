@@ -11,36 +11,36 @@ import moment from 'moment-timezone'
 
 // 🌟 𝗣 𝗥 𝗢 𝗣 𝗜 𝗘 𝗧 𝗔 𝗥 𝗜 𝗢 | 𝗦 𝗔 𝗙 𝗙 🌟
 global.owner = [
-['50433191934', '🔰 Creador 🔰', true],
-['5217227584934', 'Angel', true],
-['573001533523', 'BʀᴀʏᴀɴXD', true],
+['18493907272', '🌟ᴄʀᴇᴀᴅᴏʀ ʙʏ ᴇʀᴇɴxs🌟', true],
+['', '🥷🏽ᵃⁿᵍᵉˡⁱᵗᵒ ᵒᶠⁱᶜⁱᵃˡ ᴍɪ ʜᴇʀᴍᴀɴᴏ🥷🏼, true],
+['', '', true],
 //['numero', 'nombre', true],
 ];
 
-//si no saben no toquen gracias 🫂 
-global.mods = ['50433191934'];
-global.suittag = ['50433191934'];
+//🛠️ sᴏʟᴏ ᴘᴀʀᴀ ᴘᴇʀsᴏɴᴀʟ 🛠️
+global.mods = [''];
+global.suittag = ['18493907272'];
 global.prems = [];
 
-// 📚 INFORMACIÓN GENERAL
+// 📝 ɪɴғᴏʀᴍᴀᴄɪᴏɴ ᴘᴇʀsᴏɴᴀʟ 
 global.libreria = 'Baileys';
 global.baileys = '@whiskeysockets/baileys';
-global.nameqr = 'Pikachu-Bot';
-global.namebot = 'Pikachu-Bit';
+global.nameqr = 'AsiaBot';
+global.namebot = 'AsiaBot-LC';
 global.sessions = 'Sessions';
 global.jadi = 'JadiBots';
 global.pikaJadibts = true;
 
-// ✨ DATOS DE ESTILO Y METADATOS
-global.packname = '🧃 Pikachu-Bot MD';
-global.botname = '⚡ Pikachu-Bot ⚡';
-global.wm = 'Pikachu-MD';
-global.dev = '© Desarrollado por Deylin';
-global.textbot = 'Pikachu-Bot • Potenciado por Deylin';
-global.etiqueta = 'Team Pikachu ⚡';
+// ⭐ ᴅᴀᴛᴏs ʏ ᴇsᴛɪʟʟᴏ ⭐
+global.packname = '❀ ᴀsɪᴀ...ʙᴏᴛ ❀';
+global.botname = 'ꨄ︎ ᴀsɪᴀʙᴏᴛ-ʟᴄ ꨄ︎';
+global.wm = '✿︎ ᴀsɪᴀʙᴏᴛ-ᴍᴅ ✿︎';
+global.dev = 'ꨄ︎ ᴅᴇsᴀʀᴏʟʟᴀᴅᴏ ᴘᴏʀ ʟᴏʟɪ ᴄʟᴜʙ ᴘʀᴏʏᴇᴄᴛ ꨄ︎';
+global.textbot = 'ᴀsɪᴀʙᴏᴛ-ʟᴄ • ᴇᴄʜᴏ ᴘᴏʀ ᴇʀᴇɴxs';
+global.etiqueta = 'ꨄ︎ ʟᴏʟɪ ᴄʟᴜʙ ꨄ︎';
 
-// 💰 MONEDA Y AVATARES
-global.moneda = 'pikas';
+// 🌸 ᴍᴏɴᴇᴅᴀ ʏ ᴀᴠᴀᴛᴀʀᴇs 🌸
+global.moneda = 'Yenes';
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
