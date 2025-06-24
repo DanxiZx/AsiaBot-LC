@@ -9,7 +9,7 @@ import moment from 'moment-timezone'
 
 
 
-// ⚙️ PROPIETARIO Y STAFF
+// 🌟 𝗣 𝗥 𝗢 𝗣 𝗜 𝗘 𝗧 𝗔 𝗥 𝗜 𝗢 | 𝗦 𝗔 𝗙 𝗙 🌟
 global.owner = [
 ['50433191934', '🔰 Creador 🔰', true],
 ['5217227584934', 'Angel', true],
