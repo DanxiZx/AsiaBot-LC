@@ -90,8 +90,15 @@ ${readMore}
     const imageUrl = 'https://files.catbox.moe/x1677y.jpg'
     await m.react('🟡')
 
-        await conn.sendMessage(m.chat, {
-  text: menuText,
+// 1. Enviar imagen grande con el menú
+await conn.sendMessage(m.chat, {
+  image: { url: imageUrl },
+  caption: menuText
+}, { quoted: m })
+
+// 2. Enviar mensaje con el canal y diseño que ya usas
+await conn.sendMessage(m.chat, {
+  text: textbot, // O un pequeño texto como "Info del canal"
   contextInfo: {
     mentionedJid: [m.sender],
     isForwarded: true,
@@ -104,14 +111,15 @@ ${readMore}
     externalAdReply: {
       title: textbot,
       body: dev,
-      thumbnail: await (await fetch(imageUrl)).buffer(), // ✅ Imagen más grande
+      thumbnailUrl: imageUrl,
       sourceUrl: redes,
       mediaType: 1,
       showAdAttribution: true,
       renderLargerThumbnail: true,
     },
   },
-}, { quoted: m })
+}, { quoted: m });
+
 
   } catch (e) {
     conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
