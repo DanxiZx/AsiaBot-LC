@@ -1,3 +1,4 @@
+
 //© código creado por Deylin 
 //https://github.com/Deylin-eliac 
 //➤  no quites creditos 
@@ -40,18 +41,18 @@ export async function before(m, { conn, participants, groupMetadata }) {
   } catch (e) {}
 
   const frasesBienvenida = [
-    "¡Pika Pika! Bienvenido al grupo.",
-    "¡Un rayo de energía ha llegado al grupo!",
-    "Pikachu dice que este grupo ahora es 100% más eléctrico ⚡",
-    "¡Esperamos que la pases genial, entrenador!",
-    "Bienvenido al equipo, ¡que empiece la aventura Pokémon!"
+    "Nya Bienvenido/a",
+    "Bienvenido Pajero/a xD ",
+    "Me llamo Alisia Y te doy la Bienvenida Jiji",
+    "Hello Bienvenido/a Espero que la pases bien ",
+    "Hola Bienvenido A Nuestra Loquera xD"
   ];
   const frasesDespedida = [
-    "Pikachu te dice adiós con una descarga de cariño.",
-    "Otro entrenador deja el grupo... ¡Buena suerte!",
-    "¡Hasta la próxima, no olvides tus Pokéballs!",
-    "El grupo se queda con menos voltaje ⚡",
-    "Pikachu te extrañará 🥺"
+    "Mmmm Digamos Bye ",
+    "Ala Verga Se fue el pajero del grupo ",
+    "bye bye ",
+    "El grupo estara Mejor sin ti ",
+    "xD Se fue Un Puto "
   ];
 
   const fraseRandomBienvenida = frasesBienvenida[Math.floor(Math.random() * frasesBienvenida.length)];
@@ -60,13 +61,13 @@ export async function before(m, { conn, participants, groupMetadata }) {
   if (chat.welcome) {
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
       const bienvenida = `
-*⚡─『 𝑩𝑰𝑬𝑵𝑽𝑬𝑵𝑰𝑫𝑶/𝑨 』─🧃*
-👤 *Usuario:* ${taguser}
-🌍 *País:* ${pais}
-💬 *Grupo:* *${groupMetadata.subject}*
-👥 *Miembros:* *${totalMembers + 1}*
-📅 *Fecha:* *${date}*
-⚡ *Mensaje:* ${fraseRandomBienvenida}`.trim();
+*✨─『 𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊/𝘼 』─✨*
+👤 *𝙐𝙨𝙪𝙖𝙧𝙞𝙤:* ${taguser}
+🌍 *𝙋𝙖𝙞𝙨:* ${pais}
+💬 *𝙂𝙧𝙪𝙥𝙤:* *${groupMetadata.subject}*
+🌸 *𝙈𝙞𝙚𝙢𝙗𝙧𝙤:* *${totalMembers + 1}*
+📅 *𝙁𝙚𝙘𝙝𝙖:* *${date}*
+📝 *𝙈𝙚𝙣𝙨𝙖𝙟𝙚:* ${fraseRandomBienvenida}`.trim();
 
       await conn.sendMessage(m.chat, {
         image: { url: ppUser },
@@ -80,13 +81,13 @@ export async function before(m, { conn, participants, groupMetadata }) {
       m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_REMOVE
     ) {
       const despedida = `
-*⚡──『 𝑫𝑬𝑺𝑷𝑬𝑫𝑰𝑫𝑨 』──🧃*
+*🌟──『 𝑫𝑬𝑺𝑷𝑬𝑫𝑰𝑫𝑨 』──🌟*
 👤 *Usuario:* ${taguser}
 🌍 *País:* ${pais}
 💬 *Grupo:* *${groupMetadata.subject}*
-👥 *Miembros:* *${totalMembers - 1}*
+🌸 *Miembros:* *${totalMembers - 1}*
 📅 *Fecha:* *${date}*
-⚡ *Mensaje:* ${fraseRandomDespedida}`.trim();
+📝 *Mensaje:* ${fraseRandomDespedida}`.trim();
 
       await conn.sendMessage(m.chat, {
         image: { url: ppUser },
