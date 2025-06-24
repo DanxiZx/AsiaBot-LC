@@ -10,14 +10,14 @@ import * as fs from 'fs'
 var handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
 
 
-  //if (!m.quoted && !text) return conn.reply(m.chat, `⚡ Debes enviar un texto para hacer un tag.`, m, fake);
+  //if (!m.quoted && !text) return conn.reply(m.chat, `ꨄ︎ Debes enviar un texto para hacer un tag.`, m, fake);
 
   try { 
     let users = participants.map(u => conn.decodeJid(u.id)) 
 
-    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : "*¡Pika Pika saludos!* ⚡")
+    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : " ꨄ︎ saludos! ꨄ︎")
 
-    let newText = `${tagText}\n\n> ⚡ 𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 𝙈𝘿 ⚡`
+    let newText = `${tagText}\n\n> ꨄ︎ ᴀsɪᴀʙᴏᴛ-ʟᴄ ꨄ︎`
 
     let q = m.quoted ? m.quoted : m || m.text || m.sender
     let c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender
@@ -42,9 +42,9 @@ var handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
     let isMedia = /image|video|sticker|audio/.test(mime)
     let more = String.fromCharCode(8206)
     let masss = more.repeat(850)
-    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : "*¡Pika Pika saludos!* ⚡")
+    let tagText = text ? text : (m.quoted && m.quoted.text ? m.quoted.text : " ꨄ︎ saludos! ꨄ︎")
 
-    let htextos = `${tagText}\n\n> ⚡ 𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 𝙈𝘿 ⚡`
+    let htextos = `${tagText}\n\n> ꨄ︎ ᴀsɪᴀʙᴏᴛ-ʟᴄ ꨄ︎`
 
     if ((isMedia && quoted.mtype === 'imageMessage') && htextos) {
       var mediax = await quoted.download?.()
