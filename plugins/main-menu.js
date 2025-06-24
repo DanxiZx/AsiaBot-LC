@@ -70,7 +70,7 @@ let handler = async (m, { conn }) => {
 │ 📜 𝘾𝙊𝙈𝘼𝙉𝘿𝙊: ${totalCommands}
 │ 🟢 𝙎𝙐𝘽-𝘽𝙊𝙏 𝘼𝘾𝙏𝙄𝙑𝙊𝙎: ${users.length}
 ┗━━━━━━━━━━━━━━━━━━━━━━┛
-𝘾𝙊𝙈𝘼𝙉𝘿𝙊 𝘿𝙄𝙎𝙋𝙊𝙉𝙄𝘽𝙇𝙀 𝙔𝘼 🌟
+  𝘾𝙊𝙈𝘼𝙉𝘿𝙊 𝘼𝙇𝙄𝙎𝙄𝘼𝘽𝙊𝙏-𝙇𝘾 ⭐
 ${readMore}
 `
 
@@ -138,6 +138,6 @@ function clockString(ms) {
 }
 
 function getRandomEmoji() {
-  const emojis = ['🐣', '🟡', '🌟', '⭐']
+  const emojis = ['⭐', '🟡', '⭐', '⭐']
   return emojis[Math.floor(Math.random() * emojis.length)]
 }
