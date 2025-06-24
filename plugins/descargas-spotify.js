@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 import yts from "yt-search";
 
 let handler = async (m, { conn, text }) => {
-  if (!text) return conn.reply(m.chat, `⚡ Por favor, ingresa el nombre de una canción de Spotify.`, m, fake);
+  if (!text) return conn.reply(m.chat, `ꨄ︎ Por favor, ingresa el nombre de una canción de Spotify.`, m, fake);
 
   await m.react('🕒');
   conn.reply(m.chat, `*🎧 Buscando tu canción en Spotify...*`, m, fake);
