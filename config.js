@@ -14,6 +14,8 @@ global.owner = [
 ['18493907272', '🔰 Creador 🔰', true],
 ['', 'Angelito Oficial', true],
 ['', '', true],
+['1920437612698', 'lid', 'Danxizs', true],
+
 //['numero', 'nombre', true],
 ];
 
