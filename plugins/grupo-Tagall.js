@@ -1,7 +1,7 @@
 const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command, usedPrefix }) => {
     if (usedPrefix.toLowerCase() === 'a') return;
 
-    const customEmoji = global.db?.data?.chats?.[m.chat]?.customEmoji || '🧃';
+    const customEmoji = global.db?.data?.chats?.[m.chat]?.customEmoji || 'ꨄ︎';
     m.react(customEmoji);
 
     if (!(isAdmin || isOwner)) {
@@ -14,19 +14,19 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, co
 
     let texto = `
 ╭══ *LLAMADO A TODOS* ══⬣
-│  🧃 *Total:* ${participants.length}
-│  ⚡ *Grupo:* ${await conn.getName(m.chat)}
+│  ꨄ︎ *Total:* ${participants.length}
+│  ✿︎ *Grupo:* ${await conn.getName(m.chat)}
 ${info}
 ╰═══⬣\n`;
 
     for (const miembro of participants) {
         const number = miembro.id.split('@')[0];
 
-        let flag = "🌐";
+        let flag = "🔴";
         try {
             const res = await fetch(`https://g-mini-ia.vercel.app/api/infonumero?numero=${number}`);
             const data = await res.json();
-            flag = data.bandera || "🌐";
+            flag = data.bandera || "🔴";
         } catch (e) {
             console.log(`❌ Error obteniendo bandera de ${number}:`, e);
         }
@@ -34,7 +34,7 @@ ${info}
         texto += `┃ ${flag} @${number}\n`;
     }
 
-    texto += `╰══⬣\n✨ *${dev}* ⚔️`;
+    texto += `╰══⬣\n✨ *${dev}* ꨄ︎`;
 
     conn.sendMessage(m.chat, {
         text: texto.trim(),
