@@ -87,7 +87,7 @@ ${readMore}
 
     menuText += `\n\n*ꨄ︎ © ᴇᴄʜᴏ ᴘᴏʀ ᴇʀᴇɴxs - ${botname}*`
 
-    const imageUrl = 'https://files.catbox.moe/0shnqp.jpg'
+    const imageUrl = 'https://files.catbox.moe/x1677y.jpg'
     await m.react('🟡')
 
     await conn.sendMessage(m.chat, {
