@@ -11,10 +11,10 @@ let handler = async (m, { conn }) => {
     let sysinfo = stdout.toString("utf-8").replace(/Memory:/, "Ram:");
 
     const pikachuPing = `
-╭━━━⊰ ⚡ *Pikachu-Bot* ⚡ ⊱━━━╮
-┃ ⚡ *Estado:* ¡Activo y cargado! ⚡
-┃ 🕒 *Velocidad:* ${latensi.toFixed(4)} ms
-┃ 🧃 *Subbots:* ${users.length}
+╭━━━⊰ 🔰 Estado AsiaBot-LC 🔰 ⊱━━━╮
+┃ 🖥️ *Estado:* ¡Activo
+┃ 🌪️ *Velocidad:* ${latensi.toFixed(4)} ms
+┃ 🟢 *Subbots:* ${users.length}
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim();
 
