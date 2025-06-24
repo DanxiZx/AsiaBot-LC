@@ -28,20 +28,20 @@ console.log(`Error : ${e}`)
 }}
 
 // 👑 Información del Bot
-global.creador = 'Wa.me/50433191934'
-global.ofcbot = `Wa.me/${conn.user.jid.split('@')[0]}?text=⚡creador`
-global.asistencia = 'Wa.me/50433191934'
-global.namechannel = '⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡'
-global.namechannel2 = '⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡'
-global.namegrupo = '⚡ 𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡'
-global.namecomu = '⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡ 𝘾𝙤𝙢𝙪𝙣𝙞𝙩𝙮'
-global.listo = '⚡ *¡Aquí tienes lo que pediste, maestro pokémon!*'
+global.creador = 'Wa.me/18493907272'
+global.ofcbot = `Wa.me/${conn.user.jid.split('@')[0]}?text=⭐creador`
+global.asistencia = 'Wa.me/51901930696'
+global.namechannel = 'ꨄ︎ 𝙇𝙤𝙡𝙞 𝘾𝙡𝙪𝙗 ꨄ︎ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡'
+global.namechannel2 = 'ꨄ︎ 𝙇𝙤𝙡𝙞 𝘾𝙡𝙪𝙗 ꨄ︎'
+global.namegrupo = 'ꨄ︎ 𝙇𝙤𝙡𝙞 𝘾𝙡𝙪𝙗 ꨄ︎'
+global.namecomu = 'ꨄ︎ 𝙇𝙤𝙡𝙞 𝘾𝙡𝙪𝙗 ꨄ︎ 𝘾𝙤𝙢𝙪𝙣𝙞𝙩𝙮'
+global.listo = 'ᴀǫᴜɪ ᴛɪᴇɴᴇs ʟᴏ ǫᴜᴇ ᴘᴇᴅɪsᴛᴇ ꨄ︎'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => catalogo,)
 
 // 🗞 Canal del Bot
 global.idchannel = '120363415670808219@newsletter'
 global.canalIdM = ["120363415670808219@newsletter", "120363415670808219@newsletter"]
-global.canalNombreM = ["⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡", "⚡️𝙋𝙞𝙠𝙖𝙘𝙝𝙪-𝘽𝙤𝙩 ⚡"]
+global.canalNombreM = ["ꨄ︎ 𝙇𝙤𝙡𝙞 𝘾𝙡𝙪𝙗 ꨄ︎ 𝘾𝙝𝙖𝙣𝙣𝙚𝙡", "ꨄ︎ 𝙇𝙤𝙡𝙞 𝘾𝙡𝙪𝙗 ꨄ︎"]
 global.channelRD = await getRandomChannel()
 
 //fechas
@@ -54,30 +54,30 @@ global.año = d.toLocaleDateString('es', {year: 'numeric'})
 global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true})
 
 // 🔁 Reacciones Globales
-global.rwait = '⚡'
+global.rwait = '🟡'
 global.done = '✅'
 global.error = '✖️'
 global.msm = '⚠️'
 
-global.emoji0 = '*⚡(≧∇≦) ピカチュウ~! 🧃*\n'
-global.emoji1 = '*⚡(o≧▽ﾟ)o ピッカ〜!! 🧃*\n'
-global.emoji2 = '*⚡(✧ω✧) ピカ!! 🧃*\n'
-global.emoji3 = '*⚡(｡♥‿♥｡) ピカチュウ！🧃*\n'
-global.emoji4 = '*⚡(˘▾˘) ピィ〜カ〜！🧃*\n'
-global.emoji5 = '*⚡ᰔᩚ ( ᜊ°-° )ᜊ ピカッ！.ᐟ .ᐟ 🧃*\n'
+global.emoji0 = '⭐'
+global.emoji1 = '🟡'
+global.emoji2 = '🌟'
+global.emoji3 = 'ꨄ︎'
+global.emoji4 = 'ꨄ︎'
+global.emoji5 = '⚡'
 global.emojis = [emoji0, emoji2, emoji3, emoji4, emoji5].getRandom()
 
-global.wait = '⚡ *Espera un momento entrenador...*'
+global.wait = 'ꨄ︎ *Espera un momento ...*'
 global.waitt = global.wait
 global.waittt = global.wait
 global.waitttt = global.wait
 
 //Enlaces
-var canal = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'  
-let canal2 = 'https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m'
-var git = 'https://github.com/Deylin-Eliac'
-var github = 'https://github.com/Deylin-Eliac/Pikachu-bot' 
-let correo = 'deylibaquedano801@gmail.com'
+var canal = 'https://chat.whatsapp.com/FkBNSxVurdR2dX6m81qaZI'  
+let canal2 = 'https://whatsapp.com/channel/0029Vb9xYU9EwEjv6fBq9P2m'
+var git = 'https://github.com/DanxiZx'
+var github = 'https://github.com/DanxiZx/AsiaBot-LC' 
+let correo = 'erenxz01@gmail.com'
 
 global.redes = [canal, canal2, git, github, correo].getRandom()
 
@@ -102,7 +102,7 @@ var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
 //Fakes
-let pp = null; try { pp = await conn.profilePictureUrl('50433191934@s.whatsapp.net', 'image') } catch (e) { pp = null } global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `120363402481697721@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `Deylin creador ✨`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;Deylin creador✨,;;;\nFN:Deylin creador\nitem1.TEL;waid=50433191934:50433191934\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pp ? await (await fetch(pp)).buffer() : null, thumbnail: null, sendEphemeral: true }}}
+let pp = null; try { pp = await conn.profilePictureUrl('50433191934@s.whatsapp.net', 'image') } catch (e) { pp = null } global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `120363402481697721@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `Erenxs creador 🌟`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;Erenxs creador✨,;;;\nFN:Deylin creador\nitem1.TEL;waid=18493907272:18493907272\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pp ? await (await fetch(pp)).buffer() : null, thumbnail: null, sendEphemeral: true }}}
 
 global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1 }
 }}, { quoted: m }
