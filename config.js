@@ -13,7 +13,7 @@ import moment from 'moment-timezone'
 global.owner = [
 ['18493907272', '🌟ᴄʀᴇᴀᴅᴏʀ ʙʏ ᴇʀᴇɴxs🌟', true],
 ['',             '🥷🏽ᵃⁿᵍᵉˡⁱᵗᵒ ᵒᶠⁱᶜⁱᵃˡ ', true],
-['', '', true],
+['',              '', true],
 //['numero', 'nombre', true],
 ];
 
