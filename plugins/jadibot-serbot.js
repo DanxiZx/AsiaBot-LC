@@ -47,7 +47,6 @@ let rtx = `
 ║   
 ║ ⚠️ Ojo  Expira en 54 seg.        
 ║    ¡no pierdas este Qr  
-║         
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`;
 
 let rtx2 = `
